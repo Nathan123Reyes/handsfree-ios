@@ -6,7 +6,8 @@
   "scripts": {
     "sync": "npx cap sync ios",
     "open": "npx cap open ios",
-    "add:ios": "npx cap add ios"
+    "add:ios": "npx cap add ios",
+    "icons": "npx capacitor-assets generate --ios"
   },
   "dependencies": {
     "@capacitor/core": "^6.1.2",
@@ -14,9 +15,10 @@
     "@capacitor/app": "^6.0.1",
     "@capacitor/status-bar": "^6.0.1",
     "@capacitor/splash-screen": "^6.0.2",
-    "@revenuecat/purchases-capacitor": "^9.4.1"
+    "@revenuecat/purchases-capacitor": "^9.2.2"
   },
   "devDependencies": {
-    "@capacitor/cli": "^6.1.2"
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/assets": "^3.0.5"
   }
 }

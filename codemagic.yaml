@@ -7,7 +7,7 @@ workflows:
       vars:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
-        BUNDLE_ID: "com.reyes.handsfree"
+        BUNDLE_ID: "app.handsfree.ios"
       xcode: latest
       cocoapods: default
       node: latest
@@ -21,6 +21,12 @@ workflows:
             npx cap add ios
           fi
           npx cap sync ios
+      - name: Generate app icon from resources/icon-only.png
+        script: |
+          npx capacitor-assets generate --ios
+      - name: Set Export Compliance flag (standard HTTPS/TLS only, no custom encryption)
+        script: |
+          /usr/libexec/PlistBuddy -c "Add :ITSAppUsesNonExemptEncryption bool false" ios/App/App/Info.plist
       - name: Install CocoaPods
         script: |
           cd ios/App && pod install

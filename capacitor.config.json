@@ -1,0 +1,26 @@
+{
+  "appId": "com.reyes.handsfree",
+  "appName": "Handsfree",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "https://hands-free.netlify.app",
+    "cleartext": false
+  },
+  "ios": {
+    "contentInset": "always",
+    "allowsLinkPreview": false,
+    "scrollEnabled": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 800,
+      "backgroundColor": "#0b0d10",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0b0d10"
+    }
+  }
+}

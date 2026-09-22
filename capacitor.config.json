@@ -1,5 +1,5 @@
 {
-  "appId": "com.reyes.handsfree",
+  "appId": "app.handsfree.ios",
   "appName": "Handsfree",
   "webDir": "www",
   "bundledWebRuntime": false,
